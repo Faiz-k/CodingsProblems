@@ -1,0 +1,10 @@
+# Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+# Leet Code Q69
+
+result =0
+for y in range(50000):
+      if y*y>x:
+            break
+      else:
+            result = y
+return (result)
