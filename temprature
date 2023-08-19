@@ -1,0 +1,27 @@
+#Write a program that prints the temperature closest to 0 among input data. If two numbers are equally close to zero, positive integer has to be considered closest to zero (for instance, if the temperatures are -5 and 5, then display 5).
+
+import sys
+import math
+
+# Auto-generated code below aims at helping you parse
+# the standard input according to the problem statement.
+minn=99999
+nmin=-99999
+
+n = int(input())  # the number of temperatures to analyse
+for i in input().split():
+    # t: a temperature expressed as an integer ranging from -273 to 5526
+    t = int(i)
+    
+
+    if t < minn and t>=0 :
+        minn =t
+    if t>nmin and t<=0:
+        nmin=t
+if abs(nmin)<minn:
+    result = nmin
+else:
+    result=minn
+if minn==99999 and nmin==-99999:
+    result=0
+print(result)
